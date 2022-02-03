@@ -1,14 +1,12 @@
 package virtual_pet;
 
 
-import java.util.ArrayList;
+
 import java.util.Scanner;
 
 class VirtualPetApplication {
     public static void main(String[] args) {
 
-
-        ArrayList<String> pets = new ArrayList<String>();
 
 
         new VirtualPetApplication().game();
@@ -64,7 +62,7 @@ class VirtualPetApplication {
                 input.nextLine();
                 myShelter.adoptPetByIndex(index);
             } else if (number == 7) {
-              myPet.careAll();
+                myPet.careAll();
             }
 
 
@@ -83,7 +81,7 @@ class VirtualPetApplication {
         System.out.println("Enter 4 to see all pets in the shelter");
         System.out.println("Enter 5 to add a pet");
         System.out.println("Enter 6 to adopt a pet");
-        System.out.println("Enter 7 to care for all the pets");
+        System.out.println("Enter 7 to feed, water and play with the pet");
         System.out.println("Enter 9 to quit");
 
 

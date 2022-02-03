@@ -34,12 +34,16 @@ public class PetShelter {
         }
         return stats;
     }
+//
+//   // public void feedAll() {
+//        for (VirtualPet pet : pets.()) {
+//            pet.feed();
+//            pet.water();
+//            pet.play();
+//        }
+//    }
 
-    public void careAll(){
-        for (VirtualPet pet : pets) {
-           pet.careAll();
-        }
-    }
+
     public void adoptPetByName(String name){
         pets.remove(findPetByName(name));
     }
