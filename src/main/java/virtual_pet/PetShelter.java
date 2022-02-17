@@ -8,10 +8,10 @@ public class PetShelter {
 
     public PetShelter() {
         pets = new ArrayList<>();
-        pets.add(new VirtualPet("Happy", "gray", 10));
-        pets.add(new VirtualPet("Pig", "pink", 7));
-        pets.add(new VirtualPet("Snail", "green", 1));
-        pets.add(new VirtualPet("Spoder", "black", 2));
+        pets.add(new OrganicCat("Happy", "gray", 15,10,10,10));
+        pets.add(new RoboCat("Pig", "pink", 5));
+        pets.add(new RoboDog("RoboSnail", "green", 15));
+        pets.add(new OrganicDog("Spoder", "black", 25,10,10,10));
     }
 
 
@@ -29,26 +29,22 @@ public class PetShelter {
         String[] stats = new String[pets.size()];
         int count = 0;
         for (VirtualPet pet : pets) {
-            stats[count] = pet.stats();
+            stats[count] = pet.toString();
             count++;
         }
         return stats;
     }
-//
-//   // public void feedAll() {
-//        for (VirtualPet pet : pets.()) {
-//            pet.feed();
-//            pet.water();
-//            pet.play();
-//        }
-//    }
 
 
+    public void selectPet (String name) {pets.clone();}
     public void adoptPetByName(String name){
         pets.remove(findPetByName(name));
     }
     public void adoptPetByIndex(int index){
         pets.remove(index);
+    }
+    public VirtualPet getPetByIndex(int index){
+        return pets.get(index);
     }
 
     private VirtualPet findPetByName(String name){
